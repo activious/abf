@@ -5,7 +5,7 @@ var plot
 
 $(document).ready(
 function() {
-    hidePages()
+    hidePages();
     $("body").find("#home-page").show();
     $("#home-link").on("click", function() {
         hidePages();
@@ -24,6 +24,28 @@ function() {
         hidePages();
         $("body").find("#settings-page").show();
     });
+    $("#first").on("click", function() {
+        $("#general-content").hide();
+        $("#first-content").show();
+    })
+    $("#second").on("click", function() {
+        $("#general-content").hide();
+        $("#second-content").show();
+    })
+    $("#third").on("click", function() {
+        $("#general-content").hide();
+        $("#friends-container").show();
+        $("#third-content").show();
+
+    })
+    $("#fourth").on("click", function() {
+        $("#general-content").hide();
+        $("#fourth-content").show();
+    })
+    $("#fifth").on("click", function() {
+        $("#general-content").hide();
+        $("#fifth-content").show();
+    })
 });
 
 function hidePages() {
@@ -31,7 +53,13 @@ function hidePages() {
     $("#statistik-page").hide();
     $("#friends-page").hide();
     $("#settings-page").hide();
+    $("#first-content").hide();
+    $("#second-content").hide();
+    $("#third-content").hide();
+    $("#fourth-content").hide();
+    $("#fifth-content").hide();
 }
+
 
 function drawGraph() {
     var line1=[['2014-02-25 00:00AM',40], ['2014-02-26 00:00AM',33], ['2014-02-27 00:00AM',37], ['2014-02-28 00:00AM',41], ['2014-03-01 00:00AM',39], ['2014-03-02 00:00AM',29], ['2014-03-03 00:00AM',47], ['2014-03-04 00:00AM',40]];
