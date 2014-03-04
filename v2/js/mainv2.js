@@ -1,6 +1,8 @@
 /**
  * Created by Kasper on 04/03/14.
  */
+var plot
+
 $(document).ready(
 function() {
     hidePages()
@@ -32,10 +34,23 @@ function hidePages() {
 }
 
 function drawGraph() {
-    var line1=[['2008-09-30 4:00PM',4], ['2008-10-30 4:00PM',6.5], ['2008-11-30 4:00PM',5.7], ['2008-12-30 4:00PM',9], ['2009-01-30 4:00PM',8.2]];
-    var plot1 = $.jqplot('chart1', [line1], {
-        title:'Default Date Axis',
-        axes:{xaxis:{renderer:$.jqplot.DateAxisRenderer}},
+    var line1=[['2014-02-25 00:00AM',40], ['2014-02-26 00:00AM',33], ['2014-02-27 00:00AM',37], ['2014-02-28 00:00AM',41], ['2014-03-01 00:00AM',39], ['2014-03-02 00:00AM',29], ['2014-03-03 00:00AM',47], ['2014-03-04 00:00AM',40]];
+    plot = $.jqplot('chart1', [line1], {
+        title:'Elektricitet brugt sidste 7 dage',
+        axes:{xaxis:{renderer:$.jqplot.DateAxisRenderer,
+            tickOptions:{formatString:'%m/%#d-%y'},
+            min:'2014-02-25',
+            tickInterval:'1 day'
+        }},
         series:[{lineWidth:4, markerOptions:{style:'square'}}]
     });
 }
+var resizeGraph = function() {
+    if (plot)
+        plot.destroy();
+    drawGraph();
+}
+
+$(window).resize(function() {
+    resizeGraph();
+});
