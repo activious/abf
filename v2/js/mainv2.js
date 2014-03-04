@@ -25,7 +25,8 @@ function() {
         $("body").find("#settings-page").show();
     });
     $("#first").on("click", function() {
-        $("#general-content").hide();
+        hidePages()
+        $("body").find("#friends-page").show();
         $("#first-content").show();
     })
     $("#second").on("click", function() {
