@@ -27,27 +27,32 @@ function() {
     $("#first").on("click", function() {
         hidePages()
         $("body").find("#friends-page").show();
+        $("#general-content").hide();
         $("#first-content").show();
     })
     $("#second").on("click", function() {
         hidePages()
         $("body").find("#friends-page").show();
+        $("#general-content").hide();
         $("#second-content").show();
     })
     $("#third").on("click", function() {
         hidePages()
         $("body").find("#friends-page").show();
+        $("#general-content").hide();
         $("#third-content").show();
 
     })
     $("#fourth").on("click", function() {
         hidePages()
         $("body").find("#friends-page").show();
+        $("#general-content").hide();
         $("#fourth-content").show();
     })
     $("#fifth").on("click", function() {
         hidePages()
         $("body").find("#friends-page").show();
+        $("#general-content").hide();
         $("#fifth-content").show();
     })
 });
