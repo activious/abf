@@ -3,6 +3,7 @@
  */
 $(document).ready(
 function() {
+        hidePages();
         $("body").find("#home-page").show();
         $("#home-link").on("click", function() {
             hidePages();
@@ -14,7 +15,11 @@ function() {
         });
         $("#statistik-link").on("click", function() {
             hidePages()
-            $("body").find("#friends-page").show();
+            $("body").find("#statistik-page").show();
+        });
+        $("#settings-link").on("click", function() {
+            hidePages()
+            $("body").find("#settings-page").show();
         });
     });
 
