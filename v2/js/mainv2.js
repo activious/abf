@@ -30,21 +30,24 @@ function() {
         $("#first-content").show();
     })
     $("#second").on("click", function() {
-        $("#general-content").hide();
+        hidePages()
+        $("body").find("#friends-page").show();
         $("#second-content").show();
     })
     $("#third").on("click", function() {
-        $("#general-content").hide();
-        $("#friends-container").show();
+        hidePages()
+        $("body").find("#friends-page").show();
         $("#third-content").show();
 
     })
     $("#fourth").on("click", function() {
-        $("#general-content").hide();
+        hidePages()
+        $("body").find("#friends-page").show();
         $("#fourth-content").show();
     })
     $("#fifth").on("click", function() {
-        $("#general-content").hide();
+        hidePages()
+        $("body").find("#friends-page").show();
         $("#fifth-content").show();
     })
 });
