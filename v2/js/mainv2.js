@@ -4,6 +4,9 @@
 var plot;
 var plot2;
 var plot3;
+var plot4;
+var plot5;
+var plot6;
 
 $(document).ready(
 function() {
@@ -58,25 +61,49 @@ function() {
     });
 
     $("#third").on("click", function() {
-        hidePages()
+        hidePages();
         $("body").find("#friends-page").show();
-        $("#general-content").hide();
-        $("#third-content").show();
+        if ($("#third-content").hasClass("down")) {
+            $("body").find("#third-content").slideUp().removeClass("down");
+            plot4.destroy();
+        } else {
+            hidePages();
+            $("body").find("#friends-page").show();
+            $("body").find("#third-content").slideDown().addClass("down");
+            $("#general-content").hide();
+            renderGraph2();
+        }
+    });
 
-    })
     $("#fourth").on("click", function() {
-        hidePages()
+        hidePages();
         $("body").find("#friends-page").show();
-        $("#general-content").hide();
-        $("#fourth-content").show();
-    })
+        if ($("#fourth-content").hasClass("down")) {
+            $("body").find("#fourth-content").slideUp().removeClass("down");
+            plot5.destroy();
+        } else {
+            hidePages();
+            $("body").find("#friends-page").show();
+            $("body").find("#fourth-content").slideDown().addClass("down");
+            $("#general-content").hide();
+            renderGraph3();
+        }
+    });
+
     $("#fifth").on("click", function() {
-        hidePages()
+        hidePages();
         $("body").find("#friends-page").show();
-        $("#general-content").hide();
-        $("#fifth-content").show();
-    })
-});
+        if ($("#fifth-content").hasClass("down")) {
+            $("body").find("#fifth-content").slideUp().removeClass("down");
+            plot6.destroy();
+        } else {
+            hidePages();
+            $("body").find("#friends-page").show();
+            $("body").find("#fifth-content").slideDown().addClass("down");
+            $("#general-content").hide();
+            renderGraph4();
+        }
+    });
 
 function hidePages() {
     $("#home-page").hide();
@@ -148,11 +175,80 @@ function renderGraph1() {
     });
 }
 
+function renderGraph2() {
+    var line1=[['2014-02-25 00:00AM',40], ['2014-02-26 00:00AM',33], ['2014-02-27 00:00AM',37], ['2014-02-28 00:00AM',41], ['2014-03-01 00:00AM',39], ['2014-03-02 00:00AM',29], ['2014-03-03 00:00AM',47], ['2014-03-04 00:00AM',40]];
+    var line2=[['2014-02-25 00:00AM',30], ['2014-02-26 00:00AM',31], ['2014-02-27 00:00AM',33], ['2014-02-28 00:00AM',44], ['2014-03-01 00:00AM',35], ['2014-03-02 00:00AM',27], ['2014-03-03 00:00AM',40], ['2014-03-04 00:00AM',43]];
+    plot4 = $.jqplot('chart4', [line1, line2], {
+        title:'Consumption of electricity last 7 days',
+        axes:{
+            xaxis:{
+                renderer:$.jqplot.DateAxisRenderer,
+                rendererOptions:{
+                },
+                tickOptions:{
+                    formatString:'%m/%#d-%y',
+                    fontSize:'10pt',
+                    fontFamily:'Tahoma'
+                },
+                min:'2014-02-25',
+                tickInterval:'1 day'
+            }},
+        series:[{lineWidth:4, markerOptions:{style:'circle'}}]
+    });
+}
+
+function renderGraph3() {
+        var line1=[['2014-02-25 00:00AM',40], ['2014-02-26 00:00AM',33], ['2014-02-27 00:00AM',37], ['2014-02-28 00:00AM',41], ['2014-03-01 00:00AM',39], ['2014-03-02 00:00AM',29], ['2014-03-03 00:00AM',47], ['2014-03-04 00:00AM',40]];
+        var line2=[['2014-02-25 00:00AM',30], ['2014-02-26 00:00AM',31], ['2014-02-27 00:00AM',33], ['2014-02-28 00:00AM',44], ['2014-03-01 00:00AM',35], ['2014-03-02 00:00AM',27], ['2014-03-03 00:00AM',40], ['2014-03-04 00:00AM',43]];
+        plot5 = $.jqplot('chart5', [line1, line2], {
+            title:'Consumption of electricity last 7 days',
+            axes:{
+                xaxis:{
+                    renderer:$.jqplot.DateAxisRenderer,
+                    rendererOptions:{
+                    },
+                    tickOptions:{
+                        formatString:'%m/%#d-%y',
+                        fontSize:'10pt',
+                        fontFamily:'Tahoma'
+                    },
+                    min:'2014-02-25',
+                    tickInterval:'1 day'
+                }},
+            series:[{lineWidth:4, markerOptions:{style:'circle'}}]
+        });
+    }
+
+
+function renderGraph4() {
+        var line1=[['2014-02-25 00:00AM',40], ['2014-02-26 00:00AM',33], ['2014-02-27 00:00AM',37], ['2014-02-28 00:00AM',41], ['2014-03-01 00:00AM',39], ['2014-03-02 00:00AM',29], ['2014-03-03 00:00AM',47], ['2014-03-04 00:00AM',40]];
+        var line2=[['2014-02-25 00:00AM',30], ['2014-02-26 00:00AM',31], ['2014-02-27 00:00AM',33], ['2014-02-28 00:00AM',44], ['2014-03-01 00:00AM',35], ['2014-03-02 00:00AM',27], ['2014-03-03 00:00AM',40], ['2014-03-04 00:00AM',43]];
+        plot6 = $.jqplot('chart6', [line1, line2], {
+            title:'Consumption of electricity last 7 days',
+            axes:{
+                xaxis:{
+                    renderer:$.jqplot.DateAxisRenderer,
+                    rendererOptions:{
+                    },
+                    tickOptions:{
+                        formatString:'%m/%#d-%y',
+                        fontSize:'10pt',
+                        fontFamily:'Tahoma'
+                    },
+                    min:'2014-02-25',
+                    tickInterval:'1 day'
+                }},
+            series:[{lineWidth:4, markerOptions:{style:'circle'}}]
+        });
+    }
+
+
 var resizeGraph = function() {
     if (plot)
         plot.destroy();
     drawGraph();
-}
+};
+
 
 
 $(window).resize(function() {
