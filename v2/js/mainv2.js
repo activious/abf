@@ -2,6 +2,7 @@
  * Created by Kasper on 04/03/14.
  */
 var plot
+var plot2
 
 $(document).ready(
 function() {
@@ -86,7 +87,7 @@ function drawGraph() {
 function renderGraph() {
     var line1=[['2014-02-25 00:00AM',40], ['2014-02-26 00:00AM',33], ['2014-02-27 00:00AM',37], ['2014-02-28 00:00AM',41], ['2014-03-01 00:00AM',39], ['2014-03-02 00:00AM',29], ['2014-03-03 00:00AM',47], ['2014-03-04 00:00AM',40]];
     var line2=[['2014-02-25 00:00AM',30], ['2014-02-26 00:00AM',31], ['2014-02-27 00:00AM',33], ['2014-02-28 00:00AM',44], ['2014-03-01 00:00AM',35], ['2014-03-02 00:00AM',27], ['2014-03-03 00:00AM',40], ['2014-03-04 00:00AM',43]];
-    var plot = $.jqplot('chart2', [line1, line2], {
+    plot2 = $.jqplot('chart2', [line1, line2], {
         title:'Consumption of electricity last 7 days',
         axes:{xaxis:{renderer:$.jqplot.DateAxisRenderer,
             tickOptions:{formatString:'%m/%#d-%y'},
