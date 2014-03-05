@@ -15,10 +15,14 @@ function() {
     $("body").find("#home-page").show();
     $("#home-link").on("click", function() {
         hidePages();
+        if (plot)
+            plot.destroy();
         $("body").find("#home-page").show();
     });
     $("#friends-link").on("click", function() {
         hidePages();
+        if (plot)
+            plot.destroy();
         $("body").find("#friends-page").show();
     });
     $("#statistik-link").on("click", function() {
@@ -28,6 +32,8 @@ function() {
     });
     $("#settings-link").on("click", function() {
         hidePages();
+        if (plot)
+            plot.destroy();
         $("body").find("#settings-page").show();
     });
     $("#first").on("click", function() {
