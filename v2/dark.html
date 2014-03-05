@@ -4,11 +4,13 @@
     <title>A better future</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css" />
+    <link rel="stylesheet" href="css/jquery.jqplot.min.css" />
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/jquery.mobile-1.4.2.min.js"></script>
     <script src="js/mainv2.js"></script>
     <script src="js/jquery.jqplot.min.js"></script>
     <script src="js/jqplot.dateAxisRenderer.min.js"></script>
+    <script src="js/jqplot.canvasAxisTickRenderer.min.js"></script>
 </head>
 <body>
     <div data-role="page" data-theme="b">
@@ -42,6 +44,7 @@
             <div id="friends-page">
                 <div id="friend-box">
                     <div id="first"><a href="#" data-role="button" data-icon="arrow-d">Lars Allan</a>
+                        <div id="first-summary">
                         <table>
                         <tr>
                             <td>You</td>
@@ -53,79 +56,83 @@
                             <td>68 kWh</td>
                             <td>3 kWh</td>
                             </table>
+                        </div>
                         <div id="first-content">Results versus Lars Allan
                             <div id="chart2"></div>
 
                         </div>
                     </div>
-                    <div id="second"><a href="#">Karsten Kantsten</a></div>
-                    <div id="third"><a href="#">Torben Trutmund</a></div>
-                    <div id="fourth"><a href="#">Magnus Myg</a></div>
-                    <div id="fifth"><a href="#">Kristian Lakrids</a></div>
+                    <div id="second"><a href="#" data-role="button" data-icon="arrow-d">Karsten Kantsten</a>
+                        <div id="second-summary">
+
+                            <table>
+                                <tr>
+                                    <td>You</td>
+                                    <td>Karsten</td>
+                                    <td>Difference</td>
+                                </tr>
+                                <tr>
+                                    <td>65 kWh</td>
+                                    <td>68 kWh</td>
+                                    <td>3 kWh</td>
+                            </table>
+
+                        </div>
+                    </div>
+                    <div id="third"><a href="#" data-role="button" data-icon="arrow-d">Torben Trutmund</a>
+                        <div id="third-summary">
+
+                            <table>
+                                <tr>
+                                    <td>You</td>
+                                    <td>Torben</td>
+                                    <td>Difference</td>
+                                </tr>
+                                <tr>
+                                    <td>89 kWh</td>
+                                    <td>80 kWh</td>
+                                    <td>-9 kWh</td>
+                            </table>
+
+                        </div>
+                    </div>
+                    <div id="fourth"><a href="#" data-role="button" data-icon="arrow-d">Magnus Myg</a>
+                        <div id="fourth-summary">
+
+                            <table>
+                                <tr>
+                                    <td>You</td>
+                                    <td>Magnus</td>
+                                    <td>Difference</td>
+                                </tr>
+                                <tr>
+                                    <td>76 kWh</td>
+                                    <td>96 kWh</td>
+                                    <td>20 kWh</td>
+                            </table>
+
+                        </div>
+                    </div>
+                    <div id="fifth"><a href="#" data-role="button" data-icon="arrow-d">Kristian Lakrids</a>
+                        <div id="fifth-summary">
+
+                            <table>
+                                <tr>
+                                    <td>You</td>
+                                    <td>Kristian</td>
+                                    <td>Difference</td>
+                                </tr>
+                                <tr>
+                                    <td>54 kWh</td>
+                                    <td>50 kWh</td>
+                                    <td>-4 kWh</td>
+                            </table>
+                    </div>
                  </div>
 
                 <div id="general-content" style="display:inline-block;float: right;">Here is something general</div>
 
                 </div>
-                <div id="second-content" style="height: 200px;width: 70%; display:inline-block;float: right;">Results versus Karsten Kantsten
-
-                    <table style="width:300px">
-                        <tr>
-                            <td>You</td>
-                            <td>Karsten</td>
-                            <td>Difference</td>
-                        </tr>
-                        <tr>
-                            <td>65 kWh</td>
-                            <td>68 kWh</td>
-                            <td>3 kWh</td>
-                    </table>
-
-                </div>
-                <div id="third-content" style="height: 200px;width: 70%; display:inline-block;float: right;">Results versus Torben Trutmund
-
-                    <table>
-                        <tr>
-                            <td>You</td>
-                            <td>Torben</td>
-                            <td>Difference</td>
-                        </tr>
-                        <tr>
-                            <td>89 kWh</td>
-                            <td>80 kWh</td>
-                            <td>-9 kWh</td>
-                    </table>
-
-                </div>
-                <div id="fourth-content" style="height: 200px;width: 70%; display:inline-block;float: right;">Results versus Magnus Myg
-
-                    <table style="width:300px">
-                        <tr>
-                            <td>You</td>
-                            <td>Magnus</td>
-                            <td>Difference</td>
-                        </tr>
-                        <tr>
-                            <td>76 kWh</td>
-                            <td>96 kWh</td>
-                            <td>20 kWh</td>
-                    </table>
-
-                </div>
-                <div id="fifth-content" style="height: 200px;width: 70%; display:inline-block;float: right;">Results versus Kristian Lakrids
-
-                    <table style="width:300px">
-                        <tr>
-                            <td>You</td>
-                            <td>Kristian</td>
-                            <td>Difference</td>
-                        </tr>
-                        <tr>
-                            <td>54 kWh</td>
-                            <td>50 kWh</td>
-                            <td>-4 kWh</td>
-                    </table>
-
                 </div>
                 </div>
             </div>
