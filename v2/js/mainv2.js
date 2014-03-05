@@ -28,7 +28,7 @@ function() {
         hidePages()
         $("body").find("#friends-page").show();
         $("#general-content").hide();
-        $("#first-content").show();
+        $("body").find("#first-content").slideToggle();
         renderGraph();
     })
     $("#second").on("click", function() {
