@@ -104,6 +104,7 @@ function() {
             renderGraph4();
         }
     });
+});
 
 function hidePages() {
     $("#home-page").hide();
@@ -183,8 +184,6 @@ function renderGraph2() {
         axes:{
             xaxis:{
                 renderer:$.jqplot.DateAxisRenderer,
-                rendererOptions:{
-                },
                 tickOptions:{
                     formatString:'%m/%#d-%y',
                     fontSize:'10pt',
@@ -228,8 +227,6 @@ function renderGraph4() {
             axes:{
                 xaxis:{
                     renderer:$.jqplot.DateAxisRenderer,
-                    rendererOptions:{
-                    },
                     tickOptions:{
                         formatString:'%m/%#d-%y',
                         fontSize:'10pt',
