@@ -29,12 +29,18 @@ function() {
     $("#first").on("click", function() {
         hidePages()
         $("body").find("#friends-page").show();
-        $("#general-content").hide();
-        $("body").find("#first-content").slideToggle();
-        if (plot2)
+        if ($("#first-content").hasClass("down")) {
+            $("body").find("#first-content").slideUp().removeClass("down");
             plot2.destroy();
-        renderGraph();
-    })
+        } else {
+            hidePages()
+            $("body").find("#friends-page").show();
+            $("body").find("#first-content").slideDown().addClass("down");
+            $("#general-content").hide();
+            renderGraph();
+        }
+    });
+
     $("#second").on("click", function() {
         hidePages()
         $("body").find("#friends-page").show();
