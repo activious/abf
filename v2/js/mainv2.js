@@ -30,6 +30,8 @@ function() {
         $("body").find("#friends-page").show();
         $("#general-content").hide();
         $("body").find("#first-content").slideToggle();
+        if (plot2)
+            plot2.destroy();
         renderGraph();
     })
     $("#second").on("click", function() {
