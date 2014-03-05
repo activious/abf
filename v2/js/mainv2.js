@@ -27,13 +27,13 @@ function() {
         $("body").find("#settings-page").show();
     });
     $("#first").on("click", function() {
-        hidePages()
+        hidePages();
         $("body").find("#friends-page").show();
         if ($("#first-content").hasClass("down")) {
             $("body").find("#first-content").slideUp().removeClass("down");
             plot2.destroy();
         } else {
-            hidePages()
+            hidePages();
             $("body").find("#friends-page").show();
             $("body").find("#first-content").slideDown().addClass("down");
             $("#general-content").hide();
@@ -42,11 +42,19 @@ function() {
     });
 
     $("#second").on("click", function() {
-        hidePages()
+        hidePages();
         $("body").find("#friends-page").show();
-        $("#general-content").hide();
-        $("#second-content").show();
-    })
+        if ($("#second-content").hasClass("down")) {
+            $("body").find("#second-content").slideUp().removeClass("down");
+            plot2.destroy();
+        } else {
+            hidePages();
+            $("body").find("#friends-page").show();
+            $("body").find("#second-content").slideDown().addClass("down");
+            $("#second-content").hide();
+            renderGraph();
+        }
+    });
     $("#third").on("click", function() {
         hidePages()
         $("body").find("#friends-page").show();
@@ -97,6 +105,28 @@ function renderGraph() {
     var line1=[['2014-02-25 00:00AM',40], ['2014-02-26 00:00AM',33], ['2014-02-27 00:00AM',37], ['2014-02-28 00:00AM',41], ['2014-03-01 00:00AM',39], ['2014-03-02 00:00AM',29], ['2014-03-03 00:00AM',47], ['2014-03-04 00:00AM',40]];
     var line2=[['2014-02-25 00:00AM',30], ['2014-02-26 00:00AM',31], ['2014-02-27 00:00AM',33], ['2014-02-28 00:00AM',44], ['2014-03-01 00:00AM',35], ['2014-03-02 00:00AM',27], ['2014-03-03 00:00AM',40], ['2014-03-04 00:00AM',43]];
     plot2 = $.jqplot('chart2', [line1, line2], {
+        title:'Consumption of electricity last 7 days',
+        axes:{
+            xaxis:{
+                renderer:$.jqplot.DateAxisRenderer,
+                rendererOptions:{
+                },
+                tickOptions:{
+                    formatString:'%m/%#d-%y',
+                    fontSize:'10pt',
+                    fontFamily:'Tahoma'
+                },
+                min:'2014-02-25',
+                tickInterval:'1 day'
+            }},
+        series:[{lineWidth:4, markerOptions:{style:'circle'}}]
+    });
+}
+
+function renderGraph1() {
+    var line1=[['2014-02-25 00:00AM',40], ['2014-02-26 00:00AM',33], ['2014-02-27 00:00AM',37], ['2014-02-28 00:00AM',41], ['2014-03-01 00:00AM',39], ['2014-03-02 00:00AM',29], ['2014-03-03 00:00AM',47], ['2014-03-04 00:00AM',40]];
+    var line2=[['2014-02-25 00:00AM',30], ['2014-02-26 00:00AM',31], ['2014-02-27 00:00AM',33], ['2014-02-28 00:00AM',44], ['2014-03-01 00:00AM',35], ['2014-03-02 00:00AM',27], ['2014-03-03 00:00AM',40], ['2014-03-04 00:00AM',43]];
+    plot2 = $.jqplot('chart3', [line1, line2], {
         title:'Consumption of electricity last 7 days',
         axes:{
             xaxis:{
