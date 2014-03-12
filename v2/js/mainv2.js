@@ -258,6 +258,8 @@ function renderGraph4() {
 var resizeGraph = function() {
     if (plot)
         plot.destroy();
+    if (plot2)
+        plot2.destroy();
     drawGraph();
 };
 
