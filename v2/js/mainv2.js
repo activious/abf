@@ -142,7 +142,11 @@ function drawGraph() {
             tickOptions:{formatString:'%m/%#d-%y'},
             min:'2014-02-25',
             tickInterval:'1 day'
-        }},
+        },
+            yaxis:{
+                label:'DKK',
+                labelRenderer: $.jqplot.CanvasAxisLabelRenderer
+            }},
         series:[{lineWidth:4, markerOptions:{style:'circle'}}]
     });
 }
