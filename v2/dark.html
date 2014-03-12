@@ -35,7 +35,7 @@
         <h1>A better future</h1>
         <a href="#" id="settings-link" class="ui-btn-right" data-icon="gear">Settings</a>
     </div>
-    <div data-role="footer" data-id="foo1" data-position="fixed">
+    <div id="footer" data-role="footer" data-id="foo1" data-position="fixed">
         <div data-role="navbar" data-iconpos="top">
             <ul>
                 <li><a href="#" id="home-link" data-icon="home">Home</a></li>
@@ -44,6 +44,16 @@
             </ul>
         </div>
         <!-- /navbar -->
+    </div>
+    <div id="login" data-fullscreen="true">
+        <form>
+            <label for="username" class="ui-hidden-accessible">Username:</label>
+            <input type="text" name="username" id="username" value="" placeholder="Username"/>
+            <label for="password" class="ui-hidden-accessible">Password:</label>
+            <input type="password" name="password" id="password" value="" placeholder="Password"/>
+            <button type="button" id="login-button">Login</button>
+        </form>
+
     </div>
     <div data-role="main">
         <div id="home-page">

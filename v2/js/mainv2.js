@@ -10,15 +10,22 @@ var plot6;
 
 $(document).ready(
 function() {
+    $("#footer").hide();
     $.jqplot.config.enablePlugins = true;
     hidePages();
-    $("body").find("#home-page").show();
+    $("body").find("#login").show();
     $("#home-link").on("click", function() {
         hidePages();
         if (plot)
             plot.destroy();
         $("body").find("#home-page").show();
     });
+    $("#login-button").on("click", function() {
+        hidePages();
+        $("#footer").show();
+        $("body").find("#home-page").show();
+    });
+
     $("#friends-link").on("click", function() {
         hidePages();
         if (plot)
@@ -114,6 +121,7 @@ function() {
 
 
 function hidePages() {
+    $("#login").hide();
     $("#home-page").hide();
     $("#statistik-page").hide();
     $("#friends-page").hide();
