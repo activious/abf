@@ -26,6 +26,12 @@ function() {
         $("#navbar1").show();
         $("body").find("#home-page").show();
     });
+
+    $("#signup-link").on("click", function() {
+        hidePages()
+        $("body").find("#signup").show();
+    });
+
     $("#signup-button").on("click", function() {
         hidePages();
         $("#navbar1").show();
