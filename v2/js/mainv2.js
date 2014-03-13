@@ -25,6 +25,11 @@ function() {
         $("#footer").show();
         $("body").find("#home-page").show();
     });
+    $("#signup-button").on("click", function() {
+        hidePages();
+        $("#footer").show();
+        $("body").find("#home-page").show();
+    });
 
     $("#friends-link").on("click", function() {
         hidePages();
