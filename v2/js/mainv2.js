@@ -122,6 +122,19 @@ function() {
             renderGraph4();
         }
     });
+
+    $("#signup-tab").on("click", function() {
+        //hidePages();
+        $("body").find("#signup").show();
+        if ($("#signup").hasClass("down")) {
+            $("body").find("#signup").slideUp().removeClass("down");
+        } else {
+            //hidePages();
+            $("body").find("#signup").show();
+            $("body").find("#signup").slideDown().addClass("down");
+        }
+    });
+
 });
 
 
@@ -136,6 +149,8 @@ function hidePages() {
     $("#third-content").hide();
     $("#fourth-content").hide();
     $("#fifth-content").hide();
+    $("#signup").hide();
+
 }
 
 
