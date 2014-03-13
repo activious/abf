@@ -34,17 +34,23 @@
 
 </head>
 <body>
-<div data-role="page" data-theme="b">
+<div id="page" data-role="page" data-theme="b">
     <div data-role="header" data-position="fixed">
         <h1>A better future</h1>
         <a href="#" id="settings-link" class="ui-btn-right" data-icon="gear">Settings</a>
     </div>
     <div id="footer" data-role="footer" data-id="foo1" data-position="fixed">
-        <div data-role="navbar" data-iconpos="top">
+        <div id="navbar1" data-role="navbar" data-iconpos="top">
             <ul>
-                <li><a href="#" class="ui-btn-active" id="home-link" data-icon="home">Home</a></li>
-                <li><a href="#" id="statistik-link" data-icon="barchart">Stats</a></li>
-                <li><a href="#" id="friends-link" data-icon="user">Friends</a></li>
+                <li><a href="#" id="home-link" data-icon="home" class="ui-btn-active">Home</a></li>
+                <li><a href="#" class="statistik-link" data-icon="barchart">Stats</a></li>
+                <li><a href="#" class="friends-link" data-icon="user">Friends</a></li>
+            </ul>
+        </div>
+        <div id="navbar2" data-role="navbar" data-iconpos="top">
+            <ul>
+                <li><a href="#" data-icon="barchart" class="ui-btn-active statistik-link">Stats</a></li>
+                <li><a href="#" class="friends-link" data-icon="user">Friends</a></li>
             </ul>
         </div>
         <!-- /navbar -->
@@ -83,6 +89,7 @@
                 The Statistics-tab provide information about your consumption of electricity.<br/><br/>
                 The Friends-tab allows you to challenge your friends and compare your statistics.<br/><br/>
                 The Settings-tab allows you to configure and customize your Home-Tab and much more!
+                <div id="gotIt"><a href="#" data-role="button" data-icon="check">Got it. I don't need no more help</a></div>
             </div>
         </div>
         <div id="statistik-page">
