@@ -38,14 +38,12 @@ function() {
         $("body").find("#home-page").show();
     });
 
-    $("#gotIt").on("click", function() {
+    /*$("#gotIt").on("click", function() {
         hidePages()
-        $("#navbar1").remove();
-        $("#navbar2").show();
         $('#page').page();
         $("body").find("#statistik-page").show();
         drawGraph();
-    });
+    });*/
 
     $(".friends-link").on("click", function() {
         hidePages();
@@ -189,7 +187,7 @@ function drawGraph() {
             tickInterval:'1 day'
         },
             yaxis:{
-                label:'DKK',
+                label:'Regnbueis',
                 labelRenderer: $.jqplot.CanvasAxisLabelRenderer
             }},
         series:[{lineWidth:4, markerOptions:{style:'circle'}}]
@@ -210,7 +208,7 @@ function renderGraph() {
             tickInterval:'1 day'
         },
             yaxis:{
-                label:'DKK',
+                label:'Regnbueis',
                 labelRenderer: $.jqplot.CanvasAxisLabelRenderer
             }},
         series:[{lineWidth:4, markerOptions:{style:'circle'}}]
@@ -230,7 +228,7 @@ function renderGraph1() {
             tickInterval:'1 day'
         },
             yaxis:{
-                label:'DKK',
+                label:'Regnbueis',
                 labelRenderer: $.jqplot.CanvasAxisLabelRenderer
             }},
         series:[{lineWidth:4, markerOptions:{style:'circle'}}]
@@ -250,7 +248,7 @@ function renderGraph2() {
             tickInterval:'1 day'
         },
             yaxis:{
-                label:'DKK',
+                label:'Regnbueis',
                 labelRenderer: $.jqplot.CanvasAxisLabelRenderer
             }},
         series:[{lineWidth:4, markerOptions:{style:'circle'}}]
@@ -270,7 +268,7 @@ function renderGraph3() {
                 tickInterval:'1 day'
             },
                 yaxis:{
-                    label:'DKK',
+                    label:'Regnbueis',
                     labelRenderer: $.jqplot.CanvasAxisLabelRenderer
                 }},
             series:[{lineWidth:4, markerOptions:{style:'circle'}}]
@@ -291,7 +289,7 @@ function renderGraph4() {
                 tickInterval:'1 day'
             },
                 yaxis:{
-                    label:'DKK',
+                    label:'Regnbueis',
                     labelRenderer: $.jqplot.CanvasAxisLabelRenderer
                 }},
             series:[{lineWidth:4, markerOptions:{style:'circle'}}]

@@ -72,7 +72,7 @@
                         <label for="username" class="ui-hidden-accessible">Username:</label>
                         <input type="text" name="username" id="username-signup" value="" placeholder="Username"/>
                         <label for="password" class="ui-hidden-accessible">E-mail:</label>
-                        <input type="password" name="password" id="e-mail" value="" placeholder="E-mail"/>
+                        <input type="text" name="email" id="e-mail" value="" placeholder="E-mail"/>
                         <label for="password" class="ui-hidden-accessible">Password:</label>
                         <input type="password" name="password" id="password-signup" value="" placeholder="Password"/>
                         <label for="password" class="ui-hidden-accessible">Confirm password</label>
@@ -85,10 +85,13 @@
         <div id="home-page">
             <div id="home-page-text" style="margin-left: 5%;margin-top: 5%; height: 70%">
                 Welcome to the app of A Better Future. <br/><br/>
-                The Statistics-tab provide information about your consumption of electricity.<br/><br/>
-                The Friends-tab allows you to challenge your friends and compare your statistics.<br/><br/>
-                The Settings-tab allows you to configure and customize your Home-Tab and much more!
-                <div id="gotIt"><a href="#" data-role="button" data-icon="check">Got it. I don't need no more help</a></div>
+                This is your Home tab. Here, you will get the most relevant status information about your current consumption as well as the status of selected, ongoing challenges.
+                <ul>
+                    <li>The Stats tab provides information about your current consumption of electricity with a detailed history</li>
+                    <li>The Friends tab lets you challenge your friends in being the better energy saver</li>
+                    <li>Visit Settings to customize your Home tab and enter specific details about how much you pay per kWh.</li>
+                </ul>
+                <div id="gotIt"><a href="#" data-role="button" data-icon="check">Got it! I'm ready for this.</a></div>
             </div>
         </div>
         <div id="statistik-page">
@@ -100,7 +103,7 @@
         <div id="friends-container">
             <div id="friends-page">
                 <div id="friend-box" style="overflow: auto;">
-                    <div id="first"><a href="#" data-role="button" data-icon="arrow-d">Lars Allan</a>
+                    <div id="first"><a href="#" data-role="button" data-icon="arrow-d">Lars Allan - see more...</a>
 
                         <div id="first-summary" style="margin-left: 20%">
                             <table class="statistics">
@@ -125,7 +128,7 @@
                         </div>
                     </div>
 
-                    <div id="second"><a href="#" data-role="button" data-icon="arrow-d">Karsten Kantsten</a>
+                    <div id="second"><a href="#" data-role="button" data-icon="arrow-d">Karsten Kantsten - see more...</a>
 
                         <div id="second-summary" style="margin-left: 20%">
                             <table class="statistics">
@@ -149,7 +152,7 @@
                             <div id="chart3"></div>
                         </div>
                     </div>
-                    <div id="third"><a href="#" data-role="button" data-icon="arrow-d">Torben Trutmund</a>
+                    <div id="third"><a href="#" data-role="button" data-icon="arrow-d">Torben Trutmund - see more...</a>
 
                         <div id="third-summary" style="margin-left: 20%">
 
@@ -175,7 +178,7 @@
                             <div id="chart4"></div>
                         </div>
                     </div>
-                    <div id="fourth"><a href="#" data-role="button" data-icon="arrow-d">Magnus Myg</a>
+                    <div id="fourth"><a href="#" data-role="button" data-icon="arrow-d">Magnus Myg - see more...</a>
 
                         <div id="fourth-summary" style="margin-left: 20%">
 
@@ -201,7 +204,7 @@
                             <div id="chart5"></div>
                         </div>
                     </div>
-                    <div id="fifth"><a href="#" data-role="button" data-icon="arrow-d">Kristian Lakrids</a>
+                    <div id="fifth"><a href="#" data-role="button" data-icon="arrow-d">Kristian Lakrids - see more...</a>
 
                         <div id="fifth-summary" style="margin-left: 20%;">
 
