@@ -125,6 +125,7 @@ function() {
 
     $("#signup-tab").on("click", function() {
         //hidePages();
+        $(window).scrollTop($("#signup").scrollTop());
         $("body").find("#signup").show();
         if ($("#signup").hasClass("down")) {
             $("body").find("#signup").slideUp().removeClass("down");
@@ -133,6 +134,12 @@ function() {
             $("body").find("#signup").show();
             $("body").find("#signup").slideDown().addClass("down");
         }
+    });
+
+    $("#signup-tab").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#signup-tab").offset().top
+        }, 2000);
     });
 
 });
